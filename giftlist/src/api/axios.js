@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const ax = axios.create({
-    baseURL: "http://localhost:4040/api",
+    baseURL: "https://gift-list-app.onrender.com/api",
     withCredentials: true
 })
 export default ax;
