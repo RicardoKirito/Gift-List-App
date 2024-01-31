@@ -68,7 +68,7 @@ export function GiftList(){
                             )))):
                             (giftCar.length>0? 
                                 giftCar.map((gift, i) => (<Gift key={i} gift={gift} guestname={guestname} refresh ={getGiftList} isCar = {isCar} selected={setSelected} />))
-                                : <h4>No has añido nada en el carro</h4>    
+                                : <h4>No has añadido nada en el carrito</h4>    
                             )
                         )
                         }
