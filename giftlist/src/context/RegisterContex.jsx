@@ -12,12 +12,13 @@ export const RegisteredProvider = ({children})=>{
     const [guestname, setGuestname] = useState("");
     const [auth, setAuth] = useState(false);
     const [error, setError] = useState("");
-    const validateGuest = async guest=>{
+    const validateGuest = async (guest, code)=>{
         setError("");
         setAuth(false)
         try{
             const res = await ValidateRegister({
-                guestname: guest
+                guestname: guest,
+                code
             })
             setAuth(res.data.isRegistered);
             setGuestname(res.data.guestname)

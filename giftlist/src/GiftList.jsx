@@ -5,6 +5,7 @@ import { useGiftList } from "./context/GiftListContext.jsx";
 import { useRegistered } from "./context/RegisterContex";
 import { useNavigate } from "react-router-dom";
 import { Difuser } from "./components/Difuser.component.jsx";
+import { Capitalize } from "./libs/capitalize.js";
 
 export function GiftList(){
       
@@ -54,7 +55,7 @@ export function GiftList(){
     useEffect(()=>{ setImagePosition(0) }, [selected])
     return (
         <div >
-            <h1 className="h1">HOOOLA {guestname}!</h1>
+            <h1 className="h1">Hola {Capitalize(guestname)}!</h1>
             <div className="giftlist-container">
                 <div className="gift-car">
                     <div className="btn-giftcar" onClick={e=>setIsCar(true)}>Carrito de regalos</div>
@@ -79,6 +80,7 @@ export function GiftList(){
             {selected && (
                 
                 <div className="gift-Detailes">
+                    <div className="btn-close" onClick={e=> setSelected(null)}>&#10006;</div>
                     <div className="img-container">
                         <img src={selected.picturesLink[imagePosition]} alt="" onClick={e=>setModalImg(selected.picturesLink[imagePosition])}/>
                         {selected.picturesLink[1] &&(
@@ -108,7 +110,7 @@ export function GiftList(){
                                 </ol>
                             </div>
                         </div>
-                        <Difuser background='linear-gradient(0deg, rgb(255,255,255) 25%,rgb(255,255,255, 0.6) 73%, rgb(255,255,255, 0) 100%)' height="30px" bottom="0px"/>
+                        <Difuser background='linear-gradient(0deg, rgb(255,255,255) 25%,rgb(255,255,255, 0.6) 73%, rgb(255,255,255, 0) 100%)' height="40px" bottom="0px"/>
                     </div>
                 </div>
             )}
