@@ -54,7 +54,7 @@ export function GiftList(){
     }, [isCar])
     useEffect(()=>{ setImagePosition(0) }, [selected])
     return (
-        <div >
+        <div className="glpg">
             <h1 className="h1">Hola {Capitalize(guestname)}!</h1>
             <div className="giftlist-container">
                 <div className="gift-car">
@@ -69,7 +69,7 @@ export function GiftList(){
                             )))):
                             (giftCar.length>0? 
                                 giftCar.map((gift, i) => (<Gift key={i} gift={gift} guestname={guestname} refresh ={getGiftList} isCar = {isCar} selected={setSelected} />))
-                                : <h4>No has añadido nada en el carrito</h4>    
+                                : <h4>No has añadido nada<br/> en el carrito</h4>    
                             )
                         )
                         }

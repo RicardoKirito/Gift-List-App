@@ -10,7 +10,7 @@ app.use(morgan('dev'));
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin:  "https://e5f06a03.gift-list-sy1.pages.dev",
+    origin:  "https://gift-list-sy1.pages.dev",
     credentials: true,
 }))
 app.use("/api", registerRoutes)

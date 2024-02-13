@@ -8,7 +8,7 @@ export function Difuser(props){
             width: "100%",
             height, 
             bottom
-            }}>
+            }} className="difuser">
 
         </div>
     )
