@@ -11,7 +11,7 @@ export const register = async (req, res)=>{
         'samil',
         'tiaclaudia',
         'mariel',
-        'jenifer',
+        'yennifer',
         'gerandry',
         'tianani',
         'tioivan',
