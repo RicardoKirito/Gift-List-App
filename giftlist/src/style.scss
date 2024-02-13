@@ -32,7 +32,7 @@ body{
         
     }
     .h1{
-        margin-left: 2vw; position: relative;
+        margin-left: 2vw; 
         top: 5vh;
         margin-bottom: 2vh;
         font-size: 3rem;
@@ -395,14 +395,23 @@ a:active{
 
 @media screen and (max-width: 426px) {
     .container h1{ 
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .giftlist-container{
         background-color: var(--BASE);
     }
+    .greet{
+        span{
+            display: block;
+            text-align: center;
+            font-size: 0.86rem;
+        }
+    }
     .h1{
         background-color: var(--SECUNDARY);
         padding: 10px;
+        position: sticky;
+        top: 0px;
     }
     .container{
         display: grid;
@@ -423,14 +432,12 @@ a:active{
         h3{
             position: relative;
             top: 60%;
-            font-size: 0.7rem;
+            font-size: 1rem;
             text-align: center;
             color: var(--HILIGHT);
     
         }
-        span{
-            display: none;
-        }
+       
         .greet{
             position: static;
         }

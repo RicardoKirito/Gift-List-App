@@ -43,11 +43,11 @@ export const register = async (req, res)=>{
         '8102', '2541', '1367', '9482', '7035', '1852', '9674', '3201',
         '5749', '8426', '1693', '7034', '2856', '4962', '7183', '9632'
       ]
-    if(!guestList.includes(guestname.trim().toLowerCase())) {
+    if(!guestList.includes(guestname.replace(/ /g, "").toLowerCase())) {
         return res.status(400).json("Este no pertenece a ningun invitado")
     }
    
-    if(!(guestCode[guestList.findIndex(d=> d==guestname.trim().toLowerCase())]===code)){
+    if(!(guestCode[guestList.findIndex(d=> d==guestname.replace(/ /g, "").toLowerCase())]===code)){
         return res.status(400).json("Codigo incorrecto")
     }
     const token = createToken({name: guestname.toLowerCase()})
